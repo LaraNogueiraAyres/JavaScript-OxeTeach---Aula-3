@@ -1,0 +1,51 @@
+ let numero1 = Number(prompt("Escolha um numero"))
+ let numero2 = Number(prompt("Escolha outro numero "))
+ let operador = prompt("Escolha um dos operadores (+, -, *, /, %):")
+
+function soma(a, b, operador) {
+
+    if (a == undefined)
+    {
+        console.log("Nao eh um numero")
+        return;
+    }
+
+    if (b == undefined)
+    {
+        console.log("Nao eh um numero")
+        return;
+    }
+
+    
+    if(operador == '+')
+    {
+        return a + b;
+    }
+
+    else if(operador == '-')
+    {
+        return a - b;
+    }
+    
+    else if(operador == '*')
+    {
+        return a * b;
+    }
+
+    else if(operador == '/')
+    {
+        return a / b;
+    }
+
+    else if (operador == '%')
+    {
+        return a % b;
+    }
+
+    else 
+    {
+        console.log("Operador nao aceito")
+    }
+}
+
+console.log(soma(numero1, numero2, operador))
