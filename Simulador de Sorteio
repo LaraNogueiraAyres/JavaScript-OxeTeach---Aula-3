@@ -1,0 +1,12 @@
+let min = Number(prompt("Digite o menor numero"))
+let max = Number(prompt("Digite o maior numero"))
+
+function sorteio(min, max)
+{ 
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+
+console.log(sorteio(min, max))
