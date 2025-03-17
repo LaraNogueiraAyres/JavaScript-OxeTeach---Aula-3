@@ -1,0 +1,69 @@
+
+function sorteio(min, max)
+{ 
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+
+
+function calcular ()
+{
+    let numero1 = sorteio(0, 99)
+    let numero2 = sorteio(0, 99)
+    let operacao = sorteio(1, 5)
+    
+    if (operacao == 1)
+    {
+        let result = numero1 + numero2
+        console.log(`${numero1} + ${numero2} = ${result}`)
+    }
+
+    else if (operacao == 2)
+    {
+        let result = numero1 - numero2
+        console.log(`${numero1} - ${numero2} = ${result}`)
+    }
+
+    else if (operacao == 3)
+    {
+        let result = numero1 * numero2
+        console.log(`${numero1} * ${numero2} = ${result}`)
+    }
+
+    else if (operacao == 4)
+    {
+        if(numero2 == 0)
+        {
+            console.log("Error: divisão por zero")
+        }
+        else
+        {
+        let result = numero1 / numero2
+        console.log(`${numero1} / ${numero2} = ${result}`)
+        }
+    }
+
+    else if (operacao == 5)
+    {
+        if(numero2 == 0)
+        {
+            console.log("Error: divisão por zero")
+        }
+        else
+        {
+        let result = numero1 % numero2
+        console.log(`${numero1} % ${numero2} = ${result}`)
+        }
+    }
+}
+
+
+function rodarPrograma() 
+{
+  calcular()
+  setTimeout(rodarPrograma, 2000)
+}
+
+rodarPrograma()
